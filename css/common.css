@@ -108,9 +108,9 @@ body { height: 300vh; background-color: beige; }
 
 #slideList li a.slide1 { background-image: url(../images/bg1.jpg); }
 #slideList li a.slide2 { background-image: url(../images/bg2.PNG); }
-#slideList li a.slide3 { background-image: url(../images/bg3.PNG); }
-#slideList li a.slide4 { background-image: url(../images/bg4.png); }
-#slideList li a.slide5 { background-image: url(../images/bg5.png); }
+#slideList li a.slide3 { background-image: url(../images/bg3.png); }
+#slideList li a.slide4 { background-image: url(../images/bg4.PNG); }
+#slideList li a.slide5 { background-image: url(../images/bg5.PNG); }
 
 #slideList li a.animate { animation: slideScale 15s forwards; }
 
