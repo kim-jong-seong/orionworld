@@ -225,9 +225,9 @@ $('#product > a.kind').on('click', function(e) {
         viewNow = thisIndex;
         viewSlideNow = 0;
     
-        $('#viewer ul').eq(thisIndex).siblings('ul').animate({ marginLeft: -1350 }, 800, function() {
-            $('#viewer ul').eq(thisIndex).siblings('ul').hide().css({ marginLeft: 0 });
-            $('#viewer ul').eq(thisIndex).css({ marginLeft: 1350 }).show()
+        $('#viewer section').eq(thisIndex).siblings().find('ul').animate({ marginLeft: -1350 }, 800, function() {
+            $('#viewer section').eq(thisIndex).siblings().find('ul').hide().css({ marginLeft: 0 });
+            $('#viewer section').eq(thisIndex).find('ul').css({ marginLeft: 1350 }).show()
                                          .animate({ marginLeft: -viewListWidth * viewSlideNow }, 500, function() {
                                                viewerState = 0;
                                          });

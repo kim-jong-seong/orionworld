@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오리온</title>
     <link rel="stylesheet" href="css/common.css">
-    <script src="script/common.js" defer></script>
+    <!-- <script src="script/common.js" defer></script>
     <script src="script/jquery-3.6.0.min.js"></script>
     <script src="script/jquery-migrate-1.4.1.min.js"></script>
     <script src="script/jquery-ui.min.js"></script>
-    <script src="script/app.js" type="module" defer></script>
+    <script src="script/app.js" type="module" defer></script> -->
 </head>
 <body>
     <header id="header">
@@ -92,122 +92,137 @@
         <a href="#" class="kind on">스낵류</a>
         <a href="#" class="kind on">초코류</a>
 
+        
         <div id="viewer">
-            <ul id="pieList">
-                <li><a href="#" class="pie1 go">초코파이</a>
-                    <dl>
-                        <dt>초코파이</dt>
-                        <dd>1974년 출시한, 오리온의 영혼이 담긴 제품</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="pie2 go">초코파이 바나나</a>
-                    <dl>
-                        <dt>초코파이 바나나</dt>
-                        <dd>마쉬멜로우 속 바나나 크림으로 부드럽고 풍부한 바나나 맛 파이</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="pie3 go">호떡 품은 참 붕어빵</a>
-                    <dl>
-                        <dt>호떡 참붕어빵</dt>
-                        <dd>참붕어빵의 쫀득함과 달콤향긋한 호떡의 새로운 만남</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="pie4 go">카스타드</a>
-                    <dl>
-                        <dt>카스타드</dt>
-                        <dd>계란을 듬뿍넣은 촉촉하고 부드러운 카스타드</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="pie5 go">찰 초코파이</a>
-                    <dl>
-                        <dt>찰 초코파이</dt>
-                        <dd>새로운 식감! 빵속에 떡을 넣어 쫀득한 찰 초코파이</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="pie6 go">참 붕어빵</a>
-                    <dl>
-                        <dt>참 붕어빵</dt>
-                        <dd>단팥 초콜릿크림이 들어 있어 쫀득쫀득하고 깔끔한 붕어빵 케익</dd>
-                    </dl>
-                </li>
-            </ul>
+            <section id="pie">
+                <h3 class="hidden">파이류</h3>
     
-            <ul id="snackList">
-                <li><a href="#" class="snack1 go">꿀버터 오!구마</a>
-                    <dl>
-                        <dt>꿀버터 오!구마</dt>
-                        <dd>구운 고구마에 꿀버터 한스푼! 달콤하게 코팅해 더 빠삭한 식감!</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="snack2 go">오징어땅콩</a>
-                    <dl>
-                        <dt>오징어땅콩</dt>
-                        <dd>40년을 한결같이 사랑 받아온 대한민국 대표 스낵</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="snack3 go">도도한나쵸</a>
-                    <dl>
-                        <dt>도도한나쵸</dt>
-                        <dd>"도도함이 묻어나야, 진짜 나쵸다!" 오리온 도도한나쵸가 정통 나쵸입니다.</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="snack4 go">구운쌀칩</a>
-                    <dl>
-                        <dt>구운쌀칩</dt>
-                        <dd>화덕에 직접 구워 고소하고 바삭한 O!Rice 구운쌀칩</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="snack5 go">스윙칩 갈릭디핑소스맛</a>
-                    <dl>
-                        <dt>스윙칩 갈릭디핑</dt>
-                        <dd>진한 갈릭디핑소스맛에서 느껴지는 풍부한 단짠!</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="snack6 go">스윙칩V</a>
-                    <dl>
-                        <dt>스윙칩V</dt>
-                        <dd>풍부한 폭립바베큐맛은 특제소스로 감칠맛이 풍부하며, 진한 맛을 느낄 수 있습니다.</dd>
-                    </dl>
-                </li>
-            </ul>
-            <ul id="chocoList">
-                <li><a href="#" class="choco1 go">미쯔볼 쿠키앤크림</a>
-                    <dl>
-                        <dt>미쯔볼 쿠키크림</dt>
-                        <dd>진한 코코아 쿠키 '미쯔'에 화이트 크림을 입혀 쿠키앤크림 맛 완성!</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="choco2 go">송이모자</a>
-                    <dl>
-                        <dt>송이모자</dt>
-                        <dd>부드럽고 달콤한 초콜릿으로 입에서 사르르 녹여 먹는 재미!</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="choco3 go">투유</a>
-                    <dl>
-                        <dt>투유</dt>
-                        <dd>풍부한 우유 성분으로 깊고 진한 맛의 밀크초콜릿</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="choco4 go">다이제볼</a>
-                    <dl>
-                        <dt>다이제볼</dt>
-                        <dd>고소한 통밀 다이제 풍미의 달콤바삭 초코볼!</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="choco5 go">핫브레이크</a>
-                    <dl>
-                        <dt>핫브레이크</dt>
-                        <dd>땅콩과 아몬드로 꽉~ 채워 더욱 든든한 초코바</dd>
-                    </dl>
-                </li>
-                <li><a href="#" class="choco6 go">새알</a>
-                    <dl>
-                        <dt>새알</dt>
-                        <dd>초콜릿에 코팅을 해 손에 녹지않기 때문에, 쉽게 즐길 수 있는 초콜릿입니다.</dd>
-                    </dl>
-                </li>
-            </ul>
+                <ul id="pieList">
+                    <li><a href="#" class="pie1 go">초코파이</a>
+                        <dl>
+                            <dt>초코파이</dt>
+                            <dd>1974년 출시한, 오리온의 영혼이 담긴 제품</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="pie2 go">초코파이 바나나</a>
+                        <dl>
+                            <dt>초코파이 바나나</dt>
+                            <dd>마쉬멜로우 속 바나나 크림으로 부드럽고 풍부한 바나나 맛 파이</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="pie3 go">호떡 품은 참 붕어빵</a>
+                        <dl>
+                            <dt>호떡 참붕어빵</dt>
+                            <dd>참붕어빵의 쫀득함과 달콤향긋한 호떡의 새로운 만남</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="pie4 go">카스타드</a>
+                        <dl>
+                            <dt>카스타드</dt>
+                            <dd>계란을 듬뿍넣은 촉촉하고 부드러운 카스타드</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="pie5 go">찰 초코파이</a>
+                        <dl>
+                            <dt>찰 초코파이</dt>
+                            <dd>새로운 식감! 빵속에 떡을 넣어 쫀득한 찰 초코파이</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="pie6 go">참 붕어빵</a>
+                        <dl>
+                            <dt>참 붕어빵</dt>
+                            <dd>단팥 초콜릿크림이 들어 있어 쫀득쫀득하고 깔끔한 붕어빵 케익</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="snack">
+                <h3 class="hidden">스낵류</h3>
+
+                <ul id="snackList">
+                    <li><a href="#" class="snack1 go">꿀버터 오!구마</a>
+                        <dl>
+                            <dt>꿀버터 오!구마</dt>
+                            <dd>구운 고구마에 꿀버터 한스푼! 달콤하게 코팅해 더 빠삭한 식감!</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="snack2 go">오징어땅콩</a>
+                        <dl>
+                            <dt>오징어땅콩</dt>
+                            <dd>40년을 한결같이 사랑 받아온 대한민국 대표 스낵</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="snack3 go">도도한나쵸</a>
+                        <dl>
+                            <dt>도도한나쵸</dt>
+                            <dd>"도도함이 묻어나야, 진짜 나쵸다!" 오리온 도도한나쵸가 정통 나쵸입니다.</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="snack4 go">구운쌀칩</a>
+                        <dl>
+                            <dt>구운쌀칩</dt>
+                            <dd>화덕에 직접 구워 고소하고 바삭한 O!Rice 구운쌀칩</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="snack5 go">스윙칩 갈릭디핑소스맛</a>
+                        <dl>
+                            <dt>스윙칩 갈릭디핑</dt>
+                            <dd>진한 갈릭디핑소스맛에서 느껴지는 풍부한 단짠!</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="snack6 go">스윙칩V</a>
+                        <dl>
+                            <dt>스윙칩V</dt>
+                            <dd>풍부한 폭립바베큐맛은 특제소스로 감칠맛이 풍부하며, 진한 맛을 느낄 수 있습니다.</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="choco">
+                <h3 class="hidden">초코류</h3>
+
+                <ul id="chocoList">
+                    <li><a href="#" class="choco1 go">미쯔볼 쿠키앤크림</a>
+                        <dl>
+                            <dt>미쯔볼 쿠키크림</dt>
+                            <dd>진한 코코아 쿠키 '미쯔'에 화이트 크림을 입혀 쿠키앤크림 맛 완성!</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="choco2 go">송이모자</a>
+                        <dl>
+                            <dt>송이모자</dt>
+                            <dd>부드럽고 달콤한 초콜릿으로 입에서 사르르 녹여 먹는 재미!</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="choco3 go">투유</a>
+                        <dl>
+                            <dt>투유</dt>
+                            <dd>풍부한 우유 성분으로 깊고 진한 맛의 밀크초콜릿</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="choco4 go">다이제볼</a>
+                        <dl>
+                            <dt>다이제볼</dt>
+                            <dd>고소한 통밀 다이제 풍미의 달콤바삭 초코볼!</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="choco5 go">핫브레이크</a>
+                        <dl>
+                            <dt>핫브레이크</dt>
+                            <dd>땅콩과 아몬드로 꽉~ 채워 더욱 든든한 초코바</dd>
+                        </dl>
+                    </li>
+                    <li><a href="#" class="choco6 go">새알</a>
+                        <dl>
+                            <dt>새알</dt>
+                            <dd>초콜릿에 코팅을 해 손에 녹지않기 때문에, 쉽게 즐길 수 있는 초콜릿입니다.</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+    
 
             <a href="#" id="viewPrev" class="viewerBtn on"></a>
             <a href="#" id="viewNext" class="viewerBtn on"></a>
@@ -216,42 +231,60 @@
 
     <article id="content1">
         <header>
+            <h2 class="hidden">슬로건</h2>
+        </header>
+        
+        <h3>모두의 일상에 즐거움을 선사합니다</h3>
+        <div id="slogun">
+            <p>best brand</p>
+        </div>
+
+    </article>
+
+
+    <article id="content2">
+        <header>
             <h2 class="hidden">주요제품 소개</h2>
         </header>
 
-        <section class="content1">
-            <div class="content1Wrap">
-                <h3>재료의 맛 그대로</h3>
-                <div>
-                    <p>마켓오</p>
-                    <p>좋은 재료를 선별하여, 재료 본연의 풍미가 살아있는 홈메이드 스타일의 과자를 만듭니다.</p>
-                </div>
-            </div>
+        <section class="content2">
+            <h3 class="hiddenIndent">처음이다 곡물로 꽉찬 한끼</h3>
+            <dl>
+                <dt>마켓오</dt>
+                <dd>좋은 재료를 선별하여, 재료 본연의 풍미가 살아있는 홈메이드 스타일의 과자를 만듭니다.</dd>
+            </dl>
+            <a href="#" class="moreBtn">더보기</a>
         </section>
 
-        <section class="content1">
-            <h3>경도가 좋은 물 선택의 기준</h3>
-            <div>
-                <p>제주 용암수</p>
-                <p>국가대표 워터소믈리에가 주관한 2021년 먹는샘물 품평회 최고점의 청량하고 부드러운 맛을 느껴보세요!</p>
-            </div>
+        <section class="content2">
+            <h3 class="hiddenIndent">칼슘과 마그네슘 함량인</h3>
+            <dl>
+                <dt>제주 용암수</dt>
+                <dd>국가대표 워터소믈리에가 주관한 2021년 먹는샘물 품평회 최고점의 청량하고 부드러운 맛을 느껴보세요!</dd>
+            </dl>
+            <a href="#" class="moreBtn">더보기</a>
         </section>
 
-        <section class="content1">
-            <h3>간편 영양 충전</h3>
-            <div>
-                <p>Dr.You</p>
-                <p>닥터유는 바쁜 현대인의 영양 밸런스를 생각하는 오리온의 대표 뉴트리션 브랜드입니다.</p>
-            </div>
+        <section class="content2">
+            <h3 class="hiddenIndent">과자로 영양을 설계하다</h3>
+            <dl>
+                <dt>Dr.You</dt>
+                <dd>닥터유는 바쁜 현대인의 영양 밸런스를 생각하는 오리온의 대표 뉴트리션 브랜드입니다.</dd>
+            </dl>
+            <a href="#" class="moreBtn">더보기</a>
         </section>
 
-        <section class="content1">
-            <h3>오리온이 만든 디저트</h3>
-            <div>
-                <p>초코파이 하우스</p>
-                <p>따뜻한 정을 전하는 마음은 그대로, 오늘 날 가장 새로워진 초코파이가 태어나는 곳. 그곳이 바로 초코파이 하우스입니다.</p>
-            </div>
+        <section class="content2">
+            <h3 class="hiddenIndent">오리온이 만든 디저트</h3>
+            <dl>
+                <dt>초코파이 하우스</dt>
+                <dd>따뜻한 정을 전하는 마음은 그대로, 오늘 날 가장 새로워진 초코파이가 태어나는 곳. 그곳이 바로 초코파이 하우스입니다.</dd>
+            </dl>
+            <a href="#" class="moreBtn">더보기</a>
         </section>
+
+        <img src="images/용암수icon.PNG" alt="용암수사진">
+        <img src="images/dryouicon.PNG" alt="닥터유 단백질음료사진">
     </article>
 
     <!-- 마우스 컨트롤러 -->
