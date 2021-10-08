@@ -4,12 +4,13 @@ class App {
     constructor() {
         this.canvas = document.createElement('canvas');
         this.ctx = this.canvas.getContext('2d');
+        const content2back = document.querySelector('#content2back');
 
-        document.body.appendChild(this.canvas);
+        content2back.appendChild(this.canvas);
 
         this.pixelRatio = (devicePixelRatio > 1) ? 2 : 1;
 
-        this.totalParticles = 30;
+        this.totalParticles = 15;
         this.particles = [];
         this.radius = 3.3;
 
