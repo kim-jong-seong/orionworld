@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오리온</title>
+    <link rel="stylesheet" href="css/common.css">
+    <script src="script/common.js" defer></script>
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="script/jquery-migrate-1.4.1.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script src="script/app.js" type="module" defer></script>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#" id="logo" class="go">오리온</a></h1>
+
+        <nav id="gnbWrap">
+            <h2 class="hidden">오리온 사용자메뉴</h2>
+            <ul id="gnb">
+                <li><a href="#" class="gnbList">소개</a>
+                    <ul class="snb">
+                        <li><a href="#" class="go">오리온 소개</a></li>
+                        <li><a href="#" class="go">오리온 역사관</a></li>
+                        <li><a href="#" class="go">오리온 사업영역</a></li>
+                        <li><a href="#" class="go">IR 정보</a></li>
+                        <li><a href="#" class="go">PR 정보</a></li>
+                        <li><a href="#" class="go">채용공고</a></li>
+                        <li><a href="#" class="go">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="gnbList">제품</a>
+                    <ul class="snb">
+                        <li><a href="#" class="go">신제품</a></li>
+                        <li><a href="#" class="go">리뉴얼</a></li>
+                        <li><a href="#" class="go">Chocopie House</a></li>
+                        <li><a href="#" class="go">Dr.You</a></li>
+                        <li><a href="#" class="go">용암수</a></li>
+                        <li><a href="#" class="go">CF</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="gnbList">마켓오</a>
+                    <ul class="snb">
+                        <li><a href="#" class="go">마켓오 제과</a></li>
+                        <li><a href="#" class="go">마켓오 네이처</a></li>
+                        <li><a href="#" class="go">마켓오 레스토랑</a></li>
+                        <li><a href="#" class="go">마켓오 네이처 카페</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="gnbList">고객지원</a>
+                    <ul class="snb">
+                        <li><a href="#" class="go">고객 소리</a></li>
+                        <li><a href="#" class="go">불만 접수</a></li>
+                        <li><a href="#" class="go">의견 접수</a></li>
+                        <li><a href="#" class="go">신규거래 제안</a></li>
+                        <li><a href="#" class="go">자주묻는 질문</a></li>
+                        <li><a href="#" class="go">영업소 위치</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="tab on search"></a>
+        <a href="#" class="tab go contect"></a>
+        <a href="#" class="tab on lang"></a>
+        <a href="#" class="tab on more"></a>
+    </header>
+
+    <section id="slider">
+        <header>
+            <h2 class="hidden">슬라이더</h2>
+        </header>
+        
+        <ul id="slideList">
+            <li><a href="https://www.naver.com/" class="slide1 animate"></a></li>
+            <li><a href="https://www.google.com/" class="slide2"></a></li>
+            <li><a href="https://www.daum.net/" class="slide3"></a></li>
+            <li><a href="https://zum.com/" class="slide4"></a></li>
+            <li><a href="https://www.nate.com/" class="slide5"></a></li>
+        </ul>
+        <a href="#" id="prev" class="slideBtn on">prev</a>
+        <a href="#" id="next" class="slideBtn on">next</a>
+        <a href="#" id="in" class="go">자세히보기<span class="down"></span></a>
+    </section>
+    
+    <section id="product">
+        <header>
+            <h2>product</h2>
+        </header>
+
+        <a href="#" class="kind on">파이류</a>
+        <a href="#" class="kind on">스낵류</a>
+        <a href="#" class="kind on">초코류</a>
+
+        <div id="viewer">
+            <ul id="pieList">
+                <li><a href="#" class="pie1 go">초코파이</a><p class="cap">초코파이</p>
+                    <p class="exp">1974년 출시한, 오리온의 영혼이 담긴 제품</p></li>
+                <li><a href="#" class="pie2 go">초코파이 바나나</a><p class="cap">초코파이 바나나</p>
+                    <p class="exp">마쉬멜로우 속 바나나 크림으로 부드럽고 풍부한 바나나 맛 파이</p></li>
+                <li><a href="#" class="pie3 go">호떡 품은 참 붕어빵</a><p class="cap">호떡 참붕어빵</p>
+                    <p class="exp">참붕어빵의 쫀득함과 달콤향긋한 호떡의 새로운 만남</p></li>
+                <li><a href="#" class="pie4 go">카스타드</a><p class="cap">카스타드</p>
+                    <p class="exp">계란을 듬뿍넣은 촉촉하고 부드러운 카스타드</p></li>
+                <li><a href="#" class="pie5 go">찰 초코파이</a><p class="cap">찰 초코파이</p>
+                    <p class="exp">새로운 식감! 빵속에 떡을 넣어 쫀득한 찰 초코파이</p></li>
+                <li><a href="#" class="pie6 go">참 붕어빵</a><p class="cap">참 붕어빵</p>
+                    <p class="exp">단팥 초콜릿크림이 들어 있어 쫀득쫀득하고 깔끔한 붕어빵 케익</p></li>
+            </ul>
+    
+            <ul id="snackList">
+                <li><a href="#" class="snack1 go">꿀버터 오!구마</a><p class="cap">꿀버터 오!구마</p>
+                    <p class="exp">구운 고구마에 꿀버터 한스푼! 달콤하게 코팅해 더 빠삭한 식감!</p></li>
+                <li><a href="#" class="snack2 go">오징어땅콩</a><p class="cap">오징어땅콩</p>
+                    <p class="exp">40년을 한결같이 사랑 받아온 대한민국 대표 스낵</p></li>
+                <li><a href="#" class="snack3 go">도도한나쵸</a><p class="cap">도도한나쵸</p>
+                    <p class="exp">"도도함이 묻어나야, 진짜 나쵸다!" 오리온 도도한나쵸가 정통 나쵸입니다.</p></li>
+                <li><a href="#" class="snack4 go">구운쌀칩</a><p class="cap">구운쌀칩</p>
+                    <p class="exp">화덕에 직접 구워 고소하고 바삭한 O!Rice 구운쌀칩</p></li>
+                <li><a href="#" class="snack5 go">스윙칩 갈릭디핑소스맛</a><p class="cap">스윙칩 갈릭디핑</p>
+                    <p class="exp">진한 갈릭디핑소스맛에서 느껴지는 풍부한 단짠!</p></li>
+                <li><a href="#" class="snack6 go">스윙칩V</a><p class="cap">스윙칩V</p>
+                    <p class="exp">풍부한 폭립바베큐맛은 특제소스로 감칠맛이 풍부하며, 진한 맛을 느낄 수 있습니다.</p></li>
+            </ul>
+            <ul id="chocoList">
+                <li><a href="#" class="choco1 go">미쯔볼 쿠키앤크림</a><p class="cap">미쯔볼 쿠키크림</p>
+                    <p class="exp">진한 코코아 쿠키 '미쯔'에 화이트 크림을 입혀 쿠키앤크림 맛 완성!</p></li>
+                <li><a href="#" class="choco2 go">송이모자</a><p class="cap">송이모자</p>
+                    <p class="exp">부드럽고 달콤한 초콜릿으로 입에서 사르르 녹여 먹는 재미!</p></li>
+                <li><a href="#" class="choco3 go">투유</a><p class="cap">투유</p>
+                    <p class="exp">풍부한 우유 성분으로 깊고 진한 맛의 밀크초콜릿</p></li>
+                <li><a href="#" class="choco4 go">다이제볼</a><p class="cap">타이제볼</p>
+                    <p class="exp">고소한 통밀 다이제 풍미의 달콤바삭 초코볼!</p></li>
+                <li><a href="#" class="choco5 go">핫브레이크</a><p class="cap">핫브레이크</p>
+                    <p class="exp">땅콩과 아몬드로 꽉~ 채워 더욱 든든한 초코바</p></li>
+                <li><a href="#" class="choco6 go">새알</a><p class="cap">새알</p>
+                    <p class="exp">초콜릿에 코팅을 해 손에 녹지않기 때문에, 쉽게 즐길 수 있는 초콜릿입니다.</p></li>
+            </ul>
+
+            <a href="#" id="viewPrev" class="viewerBtn on"></a>
+            <a href="#" id="viewNext" class="viewerBtn on"></a>
+        </div>
+    </section>
+
+    <article id="content1">
+        <header>
+            <h2 class="hidden">주요제품 소개</h2>
+        </header>
+
+        <section class="content1">
+            <h3>재료의 맛 그대로<br>마켓오</h3>
+            <p class="hover">좋은 재료를 선별하여, 재료 본연의 풍미가 살아있는 홈메이드 스타일의 과자를 만듭니다.</p>
+        </section>
+
+        <section class="content1">
+            <h3>경도가 좋은 물 선택의 기준<br>제주 용암수</h3>
+            <p class="hover">국가대표 워터소믈리에가 주관한 2021년 먹는샘물 품평회 최고점의 청량하고 부드러운 맛을 느껴보세요!</p>
+        </section>
+
+        <section class="content1">
+            <h3>간편 영양 충전<br>Dr.You</h3>
+            <p class="hover">닥터유는 바쁜 현대인의 영양 밸런스를 생각하는 오리온의 대표 뉴트리션 브랜드입니다.</p>
+        </section>
+
+        <section class="content1">
+            <h3>오리온이 만든 디저트 초코파이<br>초코파이 하우스</h3>
+            <p class="hover">따뜻한 정을 전하는 마음은 그대로, 오늘 날 가장 새로워진 초코파이가 태어나는 곳. 그곳이 바로 초코파이 하우스입니다.</p>
+        </section>
+    </article>
+
+    <!-- 마우스 컨트롤러 -->
+    <div id="mouseController"></div>
+
+</body>
+</html>
