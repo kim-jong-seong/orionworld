@@ -1,4 +1,4 @@
-// const PI2 = Math.PI * 2;
+const PI2 = Math.PI * 2;
 var star = new Image();
 star.src = "images/star.png";
 
@@ -42,9 +42,9 @@ export class GlowParticle {
         }
 
         ctx.beginPath();
-        ctx.fillStyle = 'white';
-        ctx.drawImage(star, this.x, this.y);
-        // ctx.arc(this.x, this.y, this.radius, 0, PI2);
+        ctx.fillStyle = '#f00';
+        // ctx.drawImage(star, this.x, this.y);
+        ctx.arc(this.x, this.y, this.radius, 0, PI2);
         ctx.fill();
         ctx.closePath();
     }

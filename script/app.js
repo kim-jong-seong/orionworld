@@ -10,9 +10,9 @@ class App {
 
         this.pixelRatio = (devicePixelRatio > 1) ? 2 : 1;
 
-        this.totalParticles = 15;
+        this.totalParticles = 30;
         this.particles = [];
-        this.radius = 3.3;
+        this.radius = 6;
 
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
