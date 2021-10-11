@@ -40,7 +40,7 @@ body { height: 300vh; }
         font-weight: bold;
         font-size: 18px;
         user-select: none;
-        display: none;
+        /* display: none; */
 }
 
 /* 레이아웃 */
@@ -247,19 +247,30 @@ body { height: 300vh; }
 #content2 section.content2 { border-radius: 40px 0; height: 44%; box-sizing: border-box;
                              float: left; margin: 30px 2.5% 0; text-align: center;
                              background: no-repeat center center / cover; overflow: hidden; position: relative; }
+
+#content2 section.content2 .content2Wrap { width: 100%; height: 100%; background: no-repeat center center / cover; transition: 0.7s; }
+#content2 section.content2:nth-of-type(1) .content2Wrap { background-image: url(../images/marketO.JPG); }
+#content2 section.content2:nth-of-type(2) .content2Wrap { background-image: url(../images/용암수.png); }
+#content2 section.content2:nth-of-type(3) .content2Wrap { background-image: url(../images/dryou.PNG); }
+#content2 section.content2:nth-of-type(4) .content2Wrap { background-image: url(../images/chocopieHouse.png); }
+
 #content2 section.content2 h3 { font-size: 30px; width: 100%; line-height: 300px; color: #fff; font-family: 'Hahmlet', serif; }
 
-/* #content2 section.content2:hover { animation: backAnimate 0.8s forwards; } */
-#content2 section.content2:hover h3 { display: none; }
+#content2 section.content2 .content2Wrap::after { content: ""; width: 100%; height: 100%; background: #000; display: block; position: absolute; left: 0; top: 0; opacity: 0; transition: 0.4s; }
+#content2 section.content2 .content2Wrap:hover::after { opacity: 0.2; }
+#content2 section.content2:hover h3 { height: 0; }
+#content2 section.content2:hover .content2Wrap { transform: scale(1.1); }
+#content2 section.content2:hover dl { z-index: 1; transform: scale(0.9); }
+#content2 section.content2:hover .moreBtn { z-index: 1; }
 
-#content2 section.content2 dl { margin: 100px 0 0; }
+#content2 section.content2 dl { margin: 100px 0 0; color: #fff; position: relative;  }
 #content2 section.content2 dt { font-weight: bold; }
 #content2 section.content2 dd { margin: 20px 0 0; word-break: keep-all; }
 
-#content2 section.content2:nth-of-type(1) { background-image: url(../images/marketO.JPG); width: 30%; }
-#content2 section.content2:nth-of-type(2) { background-image: url(../images/용암수.png); width: 60%; }
-#content2 section.content2:nth-of-type(3) { background-image: url(../images/dryou.PNG); width: 60%; }
-#content2 section.content2:nth-of-type(4) { background-image: url(../images/chocopieHouse.png); width: 30%; }
+#content2 section.content2:nth-of-type(1) { width: 30%; }
+#content2 section.content2:nth-of-type(2) { width: 60%; }
+#content2 section.content2:nth-of-type(3) { width: 60%; }
+#content2 section.content2:nth-of-type(4) { width: 30%; }
 
 #content2 img:nth-of-type(1) { position: absolute; top: 20%; right: 0; width: 57px; height: 155px; animation: img1Animate 2s infinite; transform-origin: center 70%; 
                                opacity: 0.8; }
@@ -296,7 +307,7 @@ body { height: 300vh; }
         }
 }
 
-#content2 .moreBtn { display: block; width: 80px; line-height: 35px; position: absolute; right: 5%; top: 78%;
+#content2 .moreBtn { display: block; width: 80px; line-height: 35px; position: absolute; right: 6%; top: 78%;
                      border: 2px solid #fff; border-radius: 30px; color: #fff; }
 
 /* canvas */
@@ -334,6 +345,9 @@ body { height: 300vh; }
 #countryContent .vietnam .mapPin { left: 59%; top: 40vh; }
 #countryContent .russia .mapPin { left: 55%; top: 25vh; }
 
+#selectBar { border-left: 2px solid #eee; height: 40vh; position: absolute; left: -5%; top: 25%; }
+#selectBall { width: 8px; height: 8px; background: rgb(206, 2, 2); position: absolute; left: -4.8px; top: 18%; border-radius: 50%; }
+
 
 
 /* content4 */
@@ -350,9 +364,10 @@ body { height: 300vh; }
 
 #stock #stockInfo { color: #fff; }
 #stock #stockInfo li { float: left; margin: 50px 30px 0 0; font-size: 18px; }
-#stock #stockInfo li span { margin: 0 7px;  }
+#stock #stockInfo li span { margin: 0 7px; }
+#stock #stockInfo li:nth-of-type(1) span:nth-of-type(1) { margin: 0 15px 0 30px; color: #dd793f; font-size: 15px; }
 #stock #stockInfo li:nth-of-type(1) { position: relative; }
-#stock #stockInfo li:nth-of-type(1):after { content: ""; border-right: 2px solid #6f6f6f; display: block; height: 15px; position: absolute; left: 185px; top: 7px; }
+#stock #stockInfo li:nth-of-type(1):after { content: ""; border-right: 2px solid #6f6f6f; display: block; height: 15px; position: absolute; left: 203px; top: 7px; }
 
 #pr {}
 #proposal {}

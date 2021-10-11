@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오리온</title>
     <link rel="stylesheet" href="css/common.css">
-    <!-- <script src="script/common.js" defer></script>
+    <script src="script/common.js" defer></script>
     <script src="script/jquery-3.6.0.min.js"></script>
     <script src="script/jquery-migrate-1.4.1.min.js"></script>
     <script src="script/jquery-ui.min.js"></script>
-    <script src="script/app.js" type="module" defer></script> -->
+    <script src="script/app.js" type="module" defer></script>
 </head>
 <body>
     <header id="header">
@@ -249,39 +249,47 @@
             </header>
     
             <section class="content2">
-                <h3 class="hiddenIndent">처음이다 곡물로 꽉찬 한끼</h3>
-                <dl>
-                    <dt>마켓오</dt>
-                    <dd>좋은 재료를 선별하여, 재료 본연의 풍미가 살아있는 홈메이드 스타일의 과자를 만듭니다.</dd>
-                </dl>
-                <a href="#" class="moreBtn">더보기</a>
+                <div class="content2Wrap">
+                    <h3 class="hiddenIndent">처음이다 곡물로 꽉찬 한끼</h3>
+                    <dl>
+                        <dt>마켓오</dt>
+                        <dd>좋은 재료를 선별하여, 재료 본연의 풍미가 살아있는 홈메이드 스타일의 과자를 만듭니다.</dd>
+                    </dl>
+                    <a href="#" class="moreBtn go">더보기</a>
+                </div>
             </section>
     
             <section class="content2">
-                <h3 class="hiddenIndent">칼슘과 마그네슘 함량인</h3>
-                <dl>
-                    <dt>제주 용암수</dt>
-                    <dd>국가대표 워터소믈리에가 주관한 2021년 먹는샘물 품평회 최고점의 청량하고 부드러운 맛을 느껴보세요!</dd>
-                </dl>
-                <a href="#" class="moreBtn">더보기</a>
+                <div class="content2Wrap">
+                    <h3 class="hiddenIndent">칼슘과 마그네슘 함량인</h3>
+                    <dl>
+                        <dt>제주 용암수</dt>
+                        <dd>국가대표 워터소믈리에가 주관한 2021년 먹는샘물 품평회 최고점의 청량하고 부드러운 맛을 느껴보세요!</dd>
+                    </dl>
+                    <a href="#" class="moreBtn go">더보기</a>
+                </div>
             </section>
     
             <section class="content2">
-                <h3 class="hiddenIndent">과자로 영양을 설계하다</h3>
-                <dl>
-                    <dt>Dr.You</dt>
-                    <dd>닥터유는 바쁜 현대인의 영양 밸런스를 생각하는 오리온의 대표 뉴트리션 브랜드입니다.</dd>
-                </dl>
-                <a href="#" class="moreBtn">더보기</a>
+                <div class="content2Wrap">
+                    <h3 class="hiddenIndent">과자로 영양을 설계하다</h3>
+                    <dl>
+                        <dt>Dr.You</dt>
+                        <dd>닥터유는 바쁜 현대인의 영양 밸런스를 생각하는 오리온의 대표 뉴트리션 브랜드입니다.</dd>
+                    </dl>
+                    <a href="#" class="moreBtn go">더보기</a>
+                </div>
             </section>
     
             <section class="content2">
-                <h3 class="hiddenIndent">오리온이 만든 디저트</h3>
-                <dl>
-                    <dt>초코파이 하우스</dt>
-                    <dd>따뜻한 정을 전하는 마음은 그대로, 오늘 날 가장 새로워진 초코파이가 태어나는 곳. 그곳이 바로 초코파이 하우스입니다.</dd>
-                </dl>
-                <a href="#" class="moreBtn">더보기</a>
+                <div class="content2Wrap">
+                    <h3 class="hiddenIndent">오리온이 만든 디저트</h3>
+                    <dl>
+                        <dt>초코파이 하우스</dt>
+                        <dd>따뜻한 정을 전하는 마음은 그대로, 오늘 날 가장 새로워진 초코파이가 태어나는 곳. 그곳이 바로 초코파이 하우스입니다.</dd>
+                    </dl>
+                    <a href="#" class="moreBtn go">더보기</a>
+                </div>
             </section>
     
             <img src="images/용암수icon.PNG" alt="용암수사진">
@@ -300,9 +308,9 @@
             <p>국경을 뛰어넘는 오리온</p>
             
             <ul id="country">
-                <li><a href="#">china</a></li>
-                <li><a href="#">vietnam</a></li>
-                <li><a href="#">russia</a></li>
+                <li><a href="#" class="on">china</a></li>
+                <li><a href="#" class="on">vietnam</a></li>
+                <li><a href="#" class="on">russia</a></li>
             </ul>
 
             <ul id="countryContent">
@@ -332,7 +340,7 @@
                 </li>
             </ul>
 
-
+            <div id="selectBar"><div id="selectBall"></div></div>
         </section>
         
     </article>
@@ -343,24 +351,24 @@
         </header>
 
         <div id="container">
-            <section id="stock"><a href="#">
+            <section id="stock"><a href="#" class="go">
                 <h3>실시간 주가정보</h3>
     
                 <p>117,000</p>
                 <ul id="stockInfo">
-                    <li>전일대비<span>상승</span><span>8,500</span></li>
+                    <li>전일대비<span>▲</span><span>8,500</span></li>
                     <li>등락율<span>0.18%</span></li>
                 </ul>
             </a></section>
     
-            <section id="pr"><a href="#">
+            <section id="pr"><a href="#" class="go">
                 <div id="icon-pr"><span></span></div>
                 <h3>PR 정보</h3>
     
                 <p>오리온의 활동 정보를 확인해보세요.</p>
             </a></section>
     
-            <section id="proposal"><a href="#">
+            <section id="proposal"><a href="#" class="go">
                 <div id="icon-proposal"><span></span></div>
                 <h3>신규거래 제안</h3>
     
@@ -373,19 +381,19 @@
     <!-- footer 농심 -->
     <footer id="footer">
         <ul>
-            <li><a href="#">법적고치</a></li>
-            <li><a href="#">개인정보취급방침</a></li>
-            <li><a href="#">이메일주소수집거부</a></li>
+            <li><a href="#" class="go">법적고치</a></li>
+            <li><a href="#" class="go">개인정보취급방침</a></li>
+            <li><a href="#" class="go">이메일주소수집거부</a></li>
         </ul>
 
         <address>서울시 용산구 백범로 90다길 13 / 전화번호 : 02-710-6000 / 상담실 : 080-023-5700 (수신자 부담) / 제품 구입 문의 : 02-710-6083</address>
         <small>copyright orion corp. all right reserved</small>
 
         <ul id="sns">
-            <li><a href="https://www.facebook.com/onlyorion">facebook</a></li>
-            <li><a href="https://www.instagram.com/orion_world/">instagram</a></li>
-            <li><a href="https://www.youtube.com/channel/UCzK9rR-swgi7f2O_Q0vStjw/featured">youtube</a></li>
-            <li><a href="https://blog.naver.com/NBlogTop.naver?isHttpsRedirect=true&blogId=orionblog">blog</a></li>
+            <li><a href="https://www.facebook.com/onlyorion" class="go">facebook</a></li>
+            <li><a href="https://www.instagram.com/orion_world/" class="go">instagram</a></li>
+            <li><a href="https://www.youtube.com/channel/UCzK9rR-swgi7f2O_Q0vStjw/featured" class="go">youtube</a></li>
+            <li><a href="https://blog.naver.com/NBlogTop.naver?isHttpsRedirect=true&blogId=orionblog" class="go">blog</a></li>
         </ul>
     </footer>
 
