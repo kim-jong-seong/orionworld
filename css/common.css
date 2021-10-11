@@ -98,26 +98,38 @@ body { height: 300vh; }
 }
 
 #header a.tab { position: absolute; width: 28px; height: 28px; background: no-repeat center center / cover;
-                top: 10px; }
+                top: 10px; text-indent: -9999px; }
 
 #header a.search { right: 12%; background-image:url(../images/search.png); }
 #header a.contect { right: 9%; background-image:url(../images/work.png); }
 #header a.lang { right: 6%; background-image:url(../images/lang.png); }
 #header a.more { right: 3%; background-image:url(../images/more.png); }
 
+#header #language { position: absolute; bottom: -40%; right: 3%; border-radius: 10px; background: #fff; font-family: 'Jost', sans-serif; opacity: 0; border: 1px solid #ccc; }
+#header #language li { float: left; margin: 0.5vh 1vw; }
+#header #language li:nth-of-type(1)::after { content: ""; border-right: 2px solid #ccc; position: absolute; right: 50%; top: 30%; display: block; height: 15px; }
+#header #language li a { text-transform: uppercase; font-weight: bold; font-size: 15px; opacity: 0.3; }
+#header #language li a:hover { opacity: 0.8; }
+#header #language li a.check { opacity: 1; }
+#header #language li span { position: absolute; left: -9999px; }
 
- /* slider */
+#header a.lang:hover #language { opacity: 1; }
+
+#header #language::before { content: ""; display: block; width: 13px; height: 13px; background: #fff; position: absolute; left: calc(50% - 7.5px); top: -7px; transform: rotate(45deg);
+                            border-left: 1px solid #ccc; border-top: 1px solid #ccc; }
+
+
+/* slider */
 #slider { width: 100%; height: 50vh; margin: 0 auto; position: relative; overflow: hidden; }
 
 #slideList { width: 500%; height: 50vh; }
 #slideList li { float: left; width: 20%; height: 50vh; overflow: hidden; position: relative; }
-#slideList li a { display: block; width: 100%; height: 50vh; background: no-repeat center center / cover; }
+#slideList li a { display: block; width: 100%; height: 50vh; background: no-repeat center center / cover; text-indent: -9999px; }
 
 #slideList li a.slide1 { background-image: url(../images/bg1.PNG); }
 #slideList li a.slide2 { background-image: url(../images/bg2.png); }
 #slideList li a.slide3 { background-image: url(../images/bg3.png); }
-/* #slideList li a.slide4 { background-image: url(../images/bg4.PNG); }
-#slideList li a.slide5 { background-image: url(../images/bg5.PNG); } */
+
 
 #slideList li a.animate { animation: slideScale 15s forwards; }
 
@@ -131,10 +143,10 @@ body { height: 300vh; }
 #slider a.slideBtn { position: absolute; top: 45%; width: 65px; height: 65px; text-indent: -9999px;
                      background: url(../images/next.png) no-repeat center center / cover;
                      opacity: 0.2; transition: 0.7s; }
-#slider a#in { display: block; width: 170px; height: 42px; background: #f64646; z-index: 3;
+#slider a#in { display: block; width: 170px; height: 42px; z-index: 3;
                 position: absolute; font-size: 18px; line-height: 41px; 
                 font-family: 'Hahmlet', serif; border-radius: 2px; color: #fff;
-                left: calc(50% - 85px); bottom: 5%; 
+                left: 21%; bottom: 8%; border: 3px solid #fff; border-radius: 30px;
                 opacity: 0.2; transition: 0.7s; text-indent: 35px; }
 
 #slider:hover a.slideBtn { opacity: 0.5; }
@@ -151,6 +163,11 @@ body { height: 300vh; }
                 transform: scale(1.1);
         }
 }
+
+#slideBtnList { width: 200px; height: 21px; position: absolute; right: 22%; bottom: 10%; }
+#slideBtnList li { float: left; margin: 0 10px; }
+#slideBtnList li a { display: block; width: 15px; height: 15px; background: #fff; text-indent: -9999px; border-radius: 50%; transition: 0.5s; }
+#slideBtnList li a.select { width: 30px; border-radius: 30px; background: #dd3f3f; }
 
 
 /* product */
@@ -216,7 +233,7 @@ body { height: 300vh; }
 #chocoList li a.choco5 { background-image: url(../images/choco5.PNG); }
 #chocoList li a.choco6 { background-image: url(../images/choco6.PNG); }
 
-.viewerBtn { position: absolute; top: 20%; width: 30px; height: 30px; background: url(../images/next.png) no-repeat center center / cover;}
+.viewerBtn { position: absolute; top: 20%; width: 30px; height: 30px; background: url(../images/next.png) no-repeat center center / cover; text-indent: -9999px; }
 #viewer a#viewPrev { left: 0; transform: rotate(180deg); }
 #viewer a#viewNext { right: 0; }
 
@@ -340,7 +357,7 @@ body { height: 300vh; }
 #countryContent li p { width: 40%; line-height: 40px; float: left; margin-top: 260px; text-align: center; font-size: 25px;
                        background: #dd793f; border-radius: 30px; color: #eee; font-family: 'Jost', sans-serif; }
 
-#countryContent .mapPin { position: absolute; width: 30px; height: 38px; background: url(../images/map_pin.png); opacity: 0.5; }
+#countryContent .mapPin { position: absolute; width: 30px; height: 38px; background: url(../images/map_pin.png); opacity: 0.5; text-indent: -9999px; }
 #countryContent .china .mapPin { left: 58%; top: 35vh; }
 #countryContent .vietnam .mapPin { left: 59%; top: 40vh; }
 #countryContent .russia .mapPin { left: 55%; top: 25vh; }

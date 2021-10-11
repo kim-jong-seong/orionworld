@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오리온</title>
     <link rel="stylesheet" href="css/common.css">
-    <!-- <script src="script/common.js" defer></script>
+    <script src="script/common.js" defer></script>
     <script src="script/jquery-3.6.0.min.js"></script>
     <script src="script/jquery-migrate-1.4.1.min.js"></script>
     <script src="script/jquery-ui.min.js"></script>
-    <script src="script/app.js" type="module" defer></script> -->
+    <script src="script/app.js" type="module" defer></script>
 </head>
 <body>
     <header id="header">
@@ -60,10 +60,15 @@
                 </li>
             </ul>
         </nav>
-        <a href="#" class="tab on search"></a>
-        <a href="#" class="tab go contect"></a>
-        <a href="#" class="tab on lang"></a>
-        <a href="#" class="tab on more"></a>
+        <a href="#" class="tab on search">검색</a>
+        <a href="#" class="tab go contect">채용정보</a>
+        <a href="#" class="tab on lang">언어선택</a>
+        <a href="#" class="tab on more">메뉴더보기</a>
+        
+        <ul id="language">
+            <li><a href="#" class="go">eng<span>영어로 바꾸기</span></a></li>
+            <li><a href="#" class="go check">kor<span>한국어로 바꾸기</span></a></li>
+        </ul>
     </header>
 
     <section id="slider">
@@ -72,15 +77,22 @@
         </header>
         
         <ul id="slideList">
-            <li><a href="https://www.naver.com/" class="slide1 animate"></a></li>
-            <li><a href="https://www.google.com/" class="slide2"></a></li>
-            <li><a href="https://www.daum.net/" class="slide3"></a></li>
-            <!-- <li><a href="https://zum.com/" class="slide4"></a></li>
-            <li><a href="https://www.nate.com/" class="slide5"></a></li> -->
+            <li><a href="#" class="slide1 animate">꼬북칩 달콩인절미맛 체험단 모집</a></li>
+            <li><a href="#" class="slide2">다이제</a></li>
+            <li><a href="#" class="slide3">오리온 민초단</a></li>
         </ul>
+
+        <ul id="slideBtnList">
+            <li><a href="#" class="select">1번 슬라이드</a></li>
+            <li><a href="#">2번 슬라이드</a></li>
+            <li><a href="#">3번 슬라이드</a></li>
+        </ul>
+
         <a href="#" id="prev" class="slideBtn on">prev</a>
         <a href="#" id="next" class="slideBtn on">next</a>
         <a href="#" id="in" class="go">자세히보기<span class="down"></span></a>
+
+        
     </section>
     
     <section id="product">
@@ -224,8 +236,8 @@
             </section>
     
 
-            <a href="#" id="viewPrev" class="viewerBtn on"></a>
-            <a href="#" id="viewNext" class="viewerBtn on"></a>
+            <a href="#" id="viewPrev" class="viewerBtn on">이전</a>
+            <a href="#" id="viewNext" class="viewerBtn on">다음</a>
         </div>
     </section>
 
@@ -320,7 +332,7 @@
                         <dd>대한민국 제과업계 최초의 중국 내 스낵 원재료 제조 공장을 신창 위구르자치구 베이둔에 세워 중국시장 공략을 가속화하고 있습니다.</dd>
                     </dl>
                     <p># 연 매출 2000억 원 돌파</p>
-                    <div class="mapPin"></div>
+                    <div class="mapPin">중국지도표시</div>
                 </li>
                 <li class="vietnam">
                     <dl>
@@ -328,7 +340,7 @@
                         <dd>지난 2014년까지 누적 판매량 20억 개를 기록했고, 특히 제사상에 올라갈 정도로 베트남 국민들에게 단순한 과자 이상의 많은 사랑을 받고 있습니다.</dd>
                     </dl>
                     <p># 누적매출 1조 원 달성</p>
-                    <div class="mapPin"></div>
+                    <div class="mapPin">베트남지도표시</div>
                 </li>
                 <li class="russia">
                     <dl>
@@ -336,7 +348,7 @@
                         <dd>차별화된 마케팅과 치밀한 현지화 전략을 통해 수출불모지였던 러시아를 기회의 땅으로 만들어 지속적으로 성장해 가고 있습니다.</dd>
                     </dl>
                     <p># 연 매출 1000억 원 돌파</p>
-                    <div class="mapPin"></div>
+                    <div class="mapPin">러시아지도표시</div>
                 </li>
             </ul>
 

@@ -143,6 +143,8 @@ function prevSlide() {
     now--;
     if(now < 0) now = $('#slideList li').length-1;
 
+    slideBtnList_update();
+
     $('#slideList').css({ marginLeft: 2 * -slideWidth }).prepend($('#slideList li:last'))
                    .animate({ marginLeft: -slideWidth }, 500, function() {
                        animateSlide();
@@ -156,6 +158,8 @@ function nextSlide() {
 
     now++;
     if(now > $('#slideList li').length-1) now = 0;
+
+    slideBtnList_update();
 
     $('#slideList').animate({ marginLeft: 2 * -slideWidth }, 500, function() {
         $('#slideList').css({ marginLeft: -slideWidth }).append($('#slideList li:eq(0)'));
@@ -180,6 +184,40 @@ function animateSlide() {
     $('#slideList > li a').removeClass("animate");
     $('#slideList li').eq(1).children(0).addClass("animate");
 }
+
+// slideBtnList
+
+function slideBtnList_update() {
+    $('#slideBtnList li a').removeClass("select");
+    $('#slideBtnList li').eq(now).children(0).addClass("select");
+}
+
+
+// $('#slideBtnList li a').on('click', function() {
+//     now = $(this).parent().index();
+    
+//     let n = 0;
+
+//     slideBtnList_update();
+    
+//     for(let i = 0; i < $('#slideList li').length; i++) { 
+//         n++;
+//         if($('#slideList li').eq(i).children(0).attr("class").substr(5, 1) == now + 1) {
+//             break;
+//         }
+//     }
+
+//     if(n-1 == 0) n = $('#slideList li').length-1;
+
+//     console.log(n-2);
+
+//     for(let i = 0; i < n-2; i++) {
+//         $('#slideList').append($('#slideList li').eq(0));
+//     }
+//     $('#slideList').css({ marginLeft: 0 });
+
+
+// });
 
 
 // viewer
@@ -236,7 +274,46 @@ $('#product > a.kind').on('click', function(e) {
 });
 
 
+// content3 tab
 
+let content3_state = 0;
+
+$('#global #country li a').on('click', function(e) {
+    e.preventDefault();
+    if(content3_state == 0) {
+        content3_state = 1;
+
+        if($(this).parent().index() == 0) $('#global #selectBall').animate({ top: "18%" });
+        if($(this).parent().index() == 1) $('#global #selectBall').animate({ top: "48%" });
+        if($(this).parent().index() == 2) $('#global #selectBall').animate({ top: "78%" });
+    
+        $('#countryContent li').removeClass("show").css({ opacity: 0 });
+        $('#countryContent li').eq($(this).parent().index()).addClass("show").animate({ opacity: 1 }, 1000, function() {
+            content3_state = 0;
+        });
+    }
+});
+
+
+// header language opacity
+
+$('#header a.lang, #language').mouseenter(function() {
+    $('#language').stop().animate({ opacity: 1 });
+}).mouseleave(function() {
+    $('#language').stop().animate({ opacity: 0 });
+});
+
+
+// content4 실시간 주가 정보
+
+// let stock, stockNum;
+
+// $(window).scroll(function() {
+//     if(scrollY > $('#stock p').offset().top - 700) {
+//         stockNum = $('#stock p').text();
+//         console.log(stockNum.splice(3, 1));
+//     }
+// });
 
 
 
@@ -282,5 +359,7 @@ $('#product > a.kind').on('click', function(e) {
 
 
 // 할 일 목록
-// language 표시 -> 말풍선 만들기
-// 서브웨이 사이트 아래쪽 레이아웃으로 orion 관련 소개 부분 만들기
+// 슬라이더부분 서브웨이처럼 수정하기
+// 오른쪽에 메뉴탭 나오는거 만들기
+
+// 실시간 주가정보 splice() 물어보기
