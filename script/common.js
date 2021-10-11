@@ -63,27 +63,6 @@ $('a.on').mouseenter(function() {
     $('#mouseController').text("").stop().animate({ width: "18px", height: "18px", lineHeight: "0px" })
 });
 
-// mouse wheel을 굴렸을때 마우스 효과
-// let mouseSetTime;
-
-// function wheelUpMouse() {
-//     clearTimeout(mouseSetTime);
-//     $('#mouseController').text("▼").stop().animate({ width: "30px", height: "30px", lineHeight: "30px" });
-    
-//     mouseSetTime = setTimeout(() => {
-//         $('#mouseController').text("").stop().animate({ width: "18px", height: "18px", lineHeight: "0px" });
-//     }, 1000);
-// }
-// function wheelDownMouse() {
-//     clearTimeout(mouseSetTime);
-//     $('#mouseController').text("▲").stop().animate({ width: "30px", height: "30px", lineHeight: "20px" });
-    
-//     mouseSetTime = setTimeout(() => {
-//         $('#mouseController').text("").stop().animate({ width: "18px", height: "18px", lineHeight: "0px" });
-//     }, 1000);
-// }
-
-
 
 // gnbWrap hover
 $('#gnbWrap').mouseenter(function() {
@@ -107,117 +86,112 @@ autoSlideMode();
 
 function autoSlideMode() {
     autoSlide = setInterval(function() {
-        nextSlide();
+        next();
     }, 5000);
 }
 
-// 맨처음 자세히보기버튼 초기화
-$('#slider a#in').attr("href", $('#slideList li').eq(0).children(0).attr("href"));
-
-$('#slideList').prepend($('#slideList li:last')).css({ marginLeft: -slideWidth });
-
-$('#slider #prev').on('click', function(e) {
+// prev
+$('#slider #prev').click(function(e) {
     e.preventDefault();
-    stateBlock(prevSlide);
+    if(state == 0) {
+        state = 1;
+        prev();
+    }
 });
 
-$('#slider #next').on('click', function(e) {
-    e.preventDefault();
-    stateBlock(nextSlide);
-});
-
-// 자세히보기 버튼 최신화
-function detailsBtn() {
-    $('#slider a#in').attr("href", $('#slideList li').eq(1).children(0).attr("href"));
-}
-
-// slide 클릭시 막기
-$('#slideList li a').on('click', function(e) {
-    e.preventDefault();
-});
-
-// slide prev, next botton active
-function prevSlide() {
-    clearInterval(autoSlide);
-    
+function prev() {
     now--;
     if(now < 0) now = $('#slideList li').length-1;
 
-    slideBtnList_update();
+    clearInterval(autoSlide);
+    locationUpdate();
 
-    $('#slideList').css({ marginLeft: 2 * -slideWidth }).prepend($('#slideList li:last'))
-                   .animate({ marginLeft: -slideWidth }, 500, function() {
+    $('#slideList').prepend($('#slideList li:last')).css({ marginLeft: -slideWidth })
+                   .animate({ marginLeft: 0 }, 500, function() {
                        animateSlide();
-                       autoSlideMode();
                        detailsBtn();
-                       statePass();
+                       autoSlideMode();
+                       state = 0;
                    });
 }
-function nextSlide() {
-    clearInterval(autoSlide);
 
+// next
+$('#slider #next').click(function(e) {
+    e.preventDefault();
+    if(state == 0) {
+        state = 1;
+        next();
+    }
+});
+
+function next() {
     now++;
     if(now > $('#slideList li').length-1) now = 0;
 
-    slideBtnList_update();
+    clearInterval(autoSlide);
+    locationUpdate();
 
-    $('#slideList').animate({ marginLeft: 2 * -slideWidth }, 500, function() {
-        $('#slideList').css({ marginLeft: -slideWidth }).append($('#slideList li:eq(0)'));
+    $('#slideList').animate({ marginLeft: -slideWidth }, 500, function() {
+        $('#slideList').append($('#slideList li:eq(0)')).css({ marginLeft: 0 });
         animateSlide();
-        autoSlideMode();
         detailsBtn();
-        statePass();
+        autoSlideMode();
+        state = 0;
     });
 }
 
-function stateBlock(fn) {
-    if(state == 0) {
-        state = 1;
-        fn();
-    }
-}
-function statePass() {
-    state = 0;
-}
-
-function animateSlide() {
-    $('#slideList > li a').removeClass("animate");
-    $('#slideList li').eq(1).children(0).addClass("animate");
-}
-
-// slideBtnList
-
-function slideBtnList_update() {
+// slideBtnUpdate
+function locationUpdate() {
     $('#slideBtnList li a').removeClass("select");
     $('#slideBtnList li').eq(now).children(0).addClass("select");
 }
 
+// selectBtnClickEvent
 
-// $('#slideBtnList li a').on('click', function() {
-//     now = $(this).parent().index();
+$('#slideBtnList li a').click(function(e) {
+    e.preventDefault();
+    if(state == 0) {
+        state = 1;
+
+        now = $(this).parent().index();
+        locationUpdate();
+        clearInterval(autoSlide);
     
-//     let n = 0;
-
-//     slideBtnList_update();
+        let n = 0;
+        
+        for(let i = 0; i < $('#slideList li').length; i++) {
+           if($('#slideList li').eq(i).children(0).attr("class").substr(5, 1) == $(this).parent().index() + 1 ) {
+               n = $('#slideList li').eq(i).index();
+           } 
+        }
     
-//     for(let i = 0; i < $('#slideList li').length; i++) { 
-//         n++;
-//         if($('#slideList li').eq(i).children(0).attr("class").substr(5, 1) == now + 1) {
-//             break;
-//         }
-//     }
+        $('#slideList').animate({ marginLeft: n * -slideWidth }, 500, function() {
+            for(let i = 0; i < n; i++) {
+                $('#slideList').append($('#slideList li:eq(0)'));
+            }
+            $('#slideList').css({ marginLeft: 0 });
+            animateSlide();
+            detailsBtn();
+            autoSlideMode();
+            state = 0;
+        });
+    }
+    
+});
 
-//     if(n-1 == 0) n = $('#slideList li').length-1;
-
-//     console.log(n-2);
-
-//     for(let i = 0; i < n-2; i++) {
-//         $('#slideList').append($('#slideList li').eq(0));
-//     }
-//     $('#slideList').css({ marginLeft: 0 });
+// 슬라이드 scale 효과
+function animateSlide() {
+    $('#slideList li a').removeClass("animate");
+    $('#slideList li').eq(0).children(0).addClass("animate");
+}
 
 
-// });
+// 자세히보기 버튼 최신화
+function detailsBtn() {
+    $('#slider a#in').attr("href", $('#slideList li').eq(0).children(0).attr("href"));
+}
+
+
 
 
 // viewer
@@ -304,6 +278,18 @@ $('#header a.lang, #language').mouseenter(function() {
 });
 
 
+// 메뉴 더보기 - more
+
+$('#header a.more').on('click', function(e) {
+    e.preventDefault();
+    $('#aside').animate({ right: 0 });
+});
+$('#more_close').on('click', function(e) {
+    e.preventDefault();
+    $('#aside').animate({ right: "-20%" });
+});
+
+
 // content4 실시간 주가 정보
 
 // let stock, stockNum;
@@ -354,12 +340,8 @@ $('#header a.lang, #language').mouseenter(function() {
 
 
 
-// lastpage 설정하기
-
-
 
 // 할 일 목록
-// 슬라이더부분 서브웨이처럼 수정하기
-// 오른쪽에 메뉴탭 나오는거 만들기
 
-// 실시간 주가정보 splice() 물어보기
+// 오른쪽에 메뉴탭 나오는거 글씨 다듬기
+// 실시간 주가정보 splice() 물어보기 내일 물어보기

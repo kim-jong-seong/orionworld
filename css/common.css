@@ -397,6 +397,17 @@ body { height: 300vh; }
 #pr p, #proposal p { color: #aaaaaa; text-align: center; margin: 0 auto; font-weight: bold; width: 220px; word-break: keep-all; }
  
 
+/* aside */
+#aside { position: fixed; right: -20%; top: 0; text-align: center; width: 20%; height: 100vh; background: #fff; border-left: 2px solid #ddd; z-index: 2; }
+#aside #moreGnb { margin-top: 30px; }
+#moreGnb li {}
+#moreGnb li .moreGnbList { display: block; font-weight: bold; font-size: 25px; margin: 16px auto; padding: 5px; border-bottom: 2px solid #ddd; width: 130px; }
+#moreGnb li .moreGnbList .moreSnb {}
+.moreSnb li { padding: 3px 0; }
+.moreSnb li a {}
+
+#more_close { position: absolute; right: 88%; top: 4%; display: block; width: 20px; height: 20px; text-indent: -9999px; background: url(../images/close.png) no-repeat center center / cover; }
+
 
 /* footer */
 
