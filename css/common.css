@@ -368,14 +368,26 @@ body { height: 300vh; }
 
 /* footer */
 
-#footer { width: 60%; height: 20vh; margin: 0 auto; }
+#footer { width: 60%; height: 20vh; margin: 0 auto; position: relative; }
 #footer ul { padding-top: 30px; height: 3vh; }
-#footer ul li { float: left; margin-right: 30px; position: relative; }
-#footer ul li:nth-of-type(1)::after, #footer ul li:nth-of-type(2)::after { content: ""; height: 15px; border-right: 2px solid #ccc; display: block; position: absolute;
+#footer ul:nth-of-type(1) li { float: left; margin-right: 30px; position: relative; }
+#footer ul:nth-of-type(1) li:nth-of-type(1)::after, #footer ul:nth-of-type(1) li:nth-of-type(2)::after { content: ""; height: 15px; border-right: 2px solid #ccc; display: block; position: absolute;
                                                                            top: 4px; left: 0; }
-#footer ul li:nth-of-type(1)::after { left: 80px; }
-#footer ul li:nth-of-type(2)::after { left: 143px; }
+#footer ul:nth-of-type(1) li:nth-of-type(1)::after { left: 80px; }
+#footer ul:nth-of-type(1) li:nth-of-type(2)::after { left: 143px; }
 #footer ul li a {}
 
-#footer address { margin-top: 33px; font-size: 14px; }
+#footer address { margin-top: 30px; font-size: 14px; font-style: normal; }
 #footer small { display: block; margin-top: 10px; }
+
+#footer #sns { position: absolute; right: 0; top: 10px; padding-top: 10px; }
+#sns li { float: left; margin-right: 20px; position: relative; }
+#sns li a { width: 45px; height: 45px; display: block; text-indent: -9999px; background: no-repeat center center / cover; position: relative; }
+#sns li:nth-of-type(1) a { background-image: url(../images/facebook.svg); }
+#sns li:nth-of-type(2) a { background-image: url(../images/instagram.svg); }
+#sns li:nth-of-type(3) a { background-image: url(../images/youtube.svg); }
+#sns li:nth-of-type(4) a { background-image: url(../images/blog.png); }
+
+#sns li a::after { content: ""; display: block; position: absolute; left: 0; top: 0; width: 45px; height: 45px;
+                  background: #000; border-radius: 50%; opacity: 0.15; }
+#sns li:hover a::after { opacity: 0; }
