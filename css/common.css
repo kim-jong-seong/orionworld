@@ -178,10 +178,12 @@ body { overflow-x: hidden; }
 
 
 /* product */
-#product { width: 60%; height: 45vh; margin: 40px auto; position: relative; }
+#product { width: 60%; height: 45vh; margin: 35px auto; position: relative; }
 
 #product h2 { padding: 26px 53px 0; font-size: 26px; text-transform: capitalize;
               font-family: 'Varela Round', sans-serif; text-align: center; }
+#product h3 { margin: 5px auto; width: 300px; text-align: center; font-size: 14px; font-family: 'Varela Round', sans-serif; }
+
 #product a.kind { position: absolute; top: 15%; font-family: 'Hahmlet', serif; font-weight: bold; }
 #product a.kind:nth-of-type(1) { right: 20%; }
 #product a.kind:nth-of-type(2) { right: 13%; }
