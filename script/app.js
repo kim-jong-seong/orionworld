@@ -12,7 +12,7 @@ class App {
 
         this.totalParticles = 30;
         this.particles = [];
-        this.radius = 6;
+        this.radius = 100;
 
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();

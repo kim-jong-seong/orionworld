@@ -85,9 +85,9 @@ let autoSlide;
 autoSlideMode();
 
 function autoSlideMode() {
-    autoSlide = setInterval(function() {
-        next();
-    }, 5000);
+    // autoSlide = setInterval(function() {
+    //     next();
+    // }, 5000);
 }
 
 // prev
@@ -108,8 +108,7 @@ function prev() {
 
     $('#slideList').prepend($('#slideList li:last')).css({ marginLeft: -slideWidth })
                    .animate({ marginLeft: 0 }, 500, function() {
-                       animateSlide();
-                       detailsBtn();
+                    //    animateSlide();
                        autoSlideMode();
                        state = 0;
                    });
@@ -133,8 +132,7 @@ function next() {
 
     $('#slideList').animate({ marginLeft: -slideWidth }, 500, function() {
         $('#slideList').append($('#slideList li:eq(0)')).css({ marginLeft: 0 });
-        animateSlide();
-        detailsBtn();
+        // animateSlide();
         autoSlideMode();
         state = 0;
     });
@@ -170,8 +168,7 @@ $('#slideBtnList li a').click(function(e) {
                 $('#slideList').append($('#slideList li:eq(0)'));
             }
             $('#slideList').css({ marginLeft: 0 });
-            animateSlide();
-            detailsBtn();
+            // animateSlide();
             autoSlideMode();
             state = 0;
         });
@@ -187,9 +184,9 @@ function animateSlide() {
 
 
 // 자세히보기 버튼 최신화
-function detailsBtn() {
-    $('#slider a#in').attr("href", $('#slideList li').eq(0).children(0).attr("href"));
-}
+// function detailsBtn() {
+//     $('#slider a.in').attr("href", $('#slideList li').eq(0).children(0).attr("href"));
+// }
 
 
 
@@ -303,8 +300,8 @@ $(window).scroll(function(e) {
     if($('#content2').offset().top < scrollY + 300) {
         $('#content2 section.content2:nth-of-type(3)').animate({ left: 0, opacity: 1 }, 1000, "easeInOutCubic");
         $('#content2 section.content2:nth-of-type(4)').animate({ right: 0, opacity: 1 }, 1000, "easeInOutCubic");
-        $('#content2 img:nth-of-type(1)').animate({ right: 0, opacity: 1 }, 2000, "easeInOutCubic");
-        $('#content2 img:nth-of-type(2)').animate({ left: 0, opacity: 1 }, 2000, "easeInOutCubic");
+        $('#content2 img:nth-of-type(1)').animate({ right: "-3%", opacity: 1 }, 2000, "easeInOutCubic");
+        $('#content2 img:nth-of-type(2)').animate({ left: "-3%", opacity: 1 }, 2000, "easeInOutCubic");
     }
 
     // content4 주가 정보
@@ -342,6 +339,37 @@ $(window).scroll(function(e) {
 });
 
 
+// scroll시 header fixed
+
+let header_state = 0;
+
+// $(window).scroll(function() {
+//     if(scrollY >= 60 && header_state == 0) {
+//         header_state = 1;
+//         $('#header').stop().animate({ top: "-90px" }, 500, function() {
+//             header_state = 0;
+//         });
+//     } else if(scrollY < 60 && header_state == 0) {
+//         header_state = 1;
+//         $('#header').stop().animate({ top: "0px" }, 500, function() {
+//             header_state = 0;
+//         });
+//     }
+// });
+
+window.addEventListener('wheel', function(e) {
+    if(e.wheelDelta > 0 && header_state == 0) {
+        header_state = 1;
+        $('#header').stop().animate({ top: "0px" }, 500, function() {
+            header_state = 0;
+        });
+    } else if(e.wheelDelta < 0 && header_state == 0) {
+        header_state = 1;
+        $('#header').stop().animate({ top: "-90px" }, 500, function() {
+            header_state = 0;
+        });
+    }
+})
 
 
 // wheel header
