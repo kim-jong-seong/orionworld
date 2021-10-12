@@ -4,15 +4,14 @@ class App {
     constructor() {
         this.canvas = document.createElement('canvas');
         this.ctx = this.canvas.getContext('2d');
-        const content2back = document.querySelector('#content2back');
 
-        content2back.appendChild(this.canvas);
+        document.body.appendChild(this.canvas);
 
         this.pixelRatio = (devicePixelRatio > 1) ? 2 : 1;
 
         this.totalParticles = 30;
         this.particles = [];
-        this.radius = 100;
+        this.radius = 50;
 
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();

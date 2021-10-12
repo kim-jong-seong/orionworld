@@ -85,9 +85,9 @@ let autoSlide;
 autoSlideMode();
 
 function autoSlideMode() {
-    // autoSlide = setInterval(function() {
-    //     next();
-    // }, 5000);
+    autoSlide = setInterval(function() {
+        next();
+    }, 5000);
 }
 
 // prev
@@ -181,13 +181,6 @@ function animateSlide() {
     $('#slideList li a').removeClass("animate");
     $('#slideList li').eq(0).children(0).addClass("animate");
 }
-
-
-// 자세히보기 버튼 최신화
-// function detailsBtn() {
-//     $('#slider a.in').attr("href", $('#slideList li').eq(0).children(0).attr("href"));
-// }
-
 
 
 
@@ -343,20 +336,6 @@ $(window).scroll(function(e) {
 
 let header_state = 0;
 
-// $(window).scroll(function() {
-//     if(scrollY >= 60 && header_state == 0) {
-//         header_state = 1;
-//         $('#header').stop().animate({ top: "-90px" }, 500, function() {
-//             header_state = 0;
-//         });
-//     } else if(scrollY < 60 && header_state == 0) {
-//         header_state = 1;
-//         $('#header').stop().animate({ top: "0px" }, 500, function() {
-//             header_state = 0;
-//         });
-//     }
-// });
-
 window.addEventListener('wheel', function(e) {
     if(e.wheelDelta > 0 && header_state == 0) {
         header_state = 1;
@@ -370,44 +349,3 @@ window.addEventListener('wheel', function(e) {
         });
     }
 })
-
-
-// wheel header
-// var wheelState = 0;
-// let lastpage = 1024;
-
-// window.addEventListener('wheel', function(e) {
-    
-//     if(e.wheelDelta < 0 && wheelState == 0) {
-//         mouseY -= e.wheelDelta;
-//         wheelState = 1;
-//         wheelUpMouse();
-//         $('#header').css({ overflow: "hidden" }).stop().animate({ height: 0 }, 500, function() {
-//             wheelState = 0;
-//         });
-//     } else if(e.wheelDelta > 0 && wheelState == 0) {
-//         mouseY -= e.wheelDelta;
-//         wheelState = 1;
-//         wheelDownMouse();
-//         $('#header').css({ overflow: "unset" }).stop().animate({ height: "102px" }, 500, function() {
-//             wheelState = 0;
-//         });
-//     }
-// });
-
-// scroll event
-// window.addEventListener('scroll', function() {
-
-//     if(scrollY > 100 && wheelState == 1) {
-//         $('#header').css({ opacity: 0.8 });
-//     } else if(scrollY < 100 && wheelState == 1) {
-//         $('#header').css({ opacity: 1 });
-//     }
-// });
-
-
-
-
-// 할 일 목록
-
-// scroll시 header fixed 시키면서 슬라이더 그만큼 위에 여백주기

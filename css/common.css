@@ -19,8 +19,8 @@ li { list-style: none; }
 a { text-decoration: none; color: #000; }
 .hidden { position: absolute; left: -9999px; }
 .hiddenIndent { text-indent: -9999px; }
-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 190vh; z-index: -1; filter: blur(3px); }
-body { height: 300vh; overflow-x: hidden; }
+canvas { position: absolute; top: 0; left: 0; width: 100%; z-index: -1; opacity: 0.4; }
+body { overflow-x: hidden; }
 
 #mouseController {
         width: 18px; height: 18px;
@@ -133,7 +133,7 @@ body { height: 300vh; overflow-x: hidden; }
 #slider li p.in { display: block; width: 170px; height: 42px; z-index: 3;
                 position: absolute; font-size: 18px; line-height: 41px; 
                 font-family: 'Hahmlet', serif; border-radius: 2px; color: #fff;
-                left: 33.5%; bottom: 20%; border: 3px solid #fff; border-radius: 30px;
+                left: 33.5%; bottom: 25%; border: 3px solid #fff; border-radius: 30px;
                 opacity: 0.8; text-indent: 35px; background: #dd3f3f; }
 
 #slider p.in:hover { opacity: 1; }
@@ -141,11 +141,11 @@ body { height: 300vh; overflow-x: hidden; }
 #slider p.in span.down { position: absolute; background: url(../images/down.PNG) no-repeat center center / cover ; width: 12px; height: 12px; 
                          right: 15%; top: calc(50% - 5px ); }
 
-#slideList li a.slide1 p.cap { font-size: 40px; width: 300px; height: 60px; text-align: center; margin: 0 70% 0 30%; padding-top: 130px; font-weight: bold; font-family: 'Varela Round', sans-serif; }
+#slideList li a.slide1 p.cap { font-size: 33px; width: 400px; height: 60px; text-align: center; margin: 0 72.5% 0 27.5%; padding-top: 150px; font-weight: bold; font-family: 'Varela Round', sans-serif; }
 #slideList li a.slide1 p.cap span { color: rgb(250, 164, 51); }
-#slideList li a.slide2 p.cap { font-size: 40px; width: 300px; height: 60px; text-align: center; margin: 0 70% 0 30%; padding-top: 150px; font-weight: bold; font-family: 'Gaegu', cursive; color: #fff; }
+#slideList li a.slide2 p.cap { font-size: 40px; width: 400px; height: 60px; text-align: center; margin: 0 72.5% 0 27.5%; padding-top: 150px; font-weight: bold; font-family: 'Gaegu', cursive; color: #fff; }
 #slideList li a.slide2 p.cap span { color: rgb(245, 235, 90); }
-#slideList li a.slide3 p.cap { font-size: 38px; width: 400px; height: 60px; text-align: center; margin: 0 72% 0 28%; padding-top: 150px; font-weight: bold; font-family: 'Varela Round', sans-serif; }
+#slideList li a.slide3 p.cap { font-size: 30px; width: 400px; height: 60px; text-align: center; margin: 0 72.5% 0 27.5%; padding-top: 150px; font-weight: bold; font-family: 'Varela Round', sans-serif; }
 #slideList li a.slide3 p.cap span { color: rgb(90, 118, 245); }
 
 /* #slideList li a.animate { animation: slideScale 15s forwards; } */
@@ -170,7 +170,7 @@ body { height: 300vh; overflow-x: hidden; }
         }
 }
 
-#slideBtnList { width: 200px; height: 21px; position: absolute; right: 22%; bottom: 10%; }
+#slideBtnList { width: 200px; height: 21px; position: absolute; left: 35%; bottom: 15%; }
 #slideBtnList li { float: left; margin: 0 10px; }
 #slideBtnList li a { display: block; width: 15px; height: 15px; background: #fff; text-indent: -9999px; border-radius: 50%; transition: 0.5s; }
 #slideBtnList li a.select { width: 30px; border-radius: 30px; background: #dd3f3f; }
@@ -178,7 +178,7 @@ body { height: 300vh; overflow-x: hidden; }
 
 
 /* product */
-#product { width: 60%; height: 45vh; margin: 0 auto; position: relative; }
+#product { width: 60%; height: 45vh; margin: 40px auto; position: relative; }
 
 #product h2 { padding: 26px 53px 0; font-size: 26px; text-transform: capitalize;
               font-family: 'Varela Round', sans-serif; text-align: center; }
