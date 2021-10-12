@@ -293,34 +293,53 @@ $('#more_close').on('click', function(e) {
 
 // scroll content2
 
+let content4_state = 0;
+
 $(window).scroll(function(e) {
     if($('#content2').offset().top < scrollY + 500) {
-        $('#content2 section.content2:nth-of-type(1)').animate({ left: 0, opacity: 1 }, 1500, "easeInOutCubic");
-        $('#content2 section.content2:nth-of-type(2)').animate({ right: 0, opacity: 1 }, 1500, "easeInOutCubic");
+        $('#content2 section.content2:nth-of-type(1)').animate({ left: 0, opacity: 1 }, 1000, "easeInOutCubic");
+        $('#content2 section.content2:nth-of-type(2)').animate({ right: 0, opacity: 1 }, 1000, "easeInOutCubic");
     }
     if($('#content2').offset().top < scrollY + 300) {
-        $('#content2 section.content2:nth-of-type(3)').animate({ left: 0, opacity: 1 }, 1500, "easeInOutCubic");
-        $('#content2 section.content2:nth-of-type(4)').animate({ right: 0, opacity: 1 }, 1500, "easeInOutCubic");
-        $('#content2 img:nth-of-type(1)').animate({ right: 0, opacity: 1 }, 3000, "easeInOutCubic");
-        $('#content2 img:nth-of-type(2)').animate({ left: 0, opacity: 1 }, 3000, "easeInOutCubic");
+        $('#content2 section.content2:nth-of-type(3)').animate({ left: 0, opacity: 1 }, 1000, "easeInOutCubic");
+        $('#content2 section.content2:nth-of-type(4)').animate({ right: 0, opacity: 1 }, 1000, "easeInOutCubic");
+        $('#content2 img:nth-of-type(1)').animate({ right: 0, opacity: 1 }, 2000, "easeInOutCubic");
+        $('#content2 img:nth-of-type(2)').animate({ left: 0, opacity: 1 }, 2000, "easeInOutCubic");
     }
 
-})
+    // content4 주가 정보
+    if(scrollY > Math.round($('#content4').offset().top - 900) && content4_state == 0) {
 
+        let stock = $('#stock > a p').text();
+        let split_stock = stock.split('');
+        split_stock.splice(3, 1);
 
+        let n = Number(split_stock.join(''));
+        
+        for(let i = 0; i <= n; i++) {
+            setTimeout(function() {
+                let num = i;
+                let stringNum;
+                let box;
 
+                if(num >= 1000) {
+                    stringNum = num.toString();
+                    box = stringNum.slice(-3);
+                    stringNum = stringNum.slice(0, -3);
+                    stringNum = stringNum.concat(",");
+                    stringNum = stringNum.concat(box);
 
-// content4 실시간 주가 정보
+                    $('#stock > a p').text(stringNum);
+                } else {
+                    $('#stock > a p').text(i);
+                }
 
-// let stock, stockNum;
+            }, i * 0.025);
+        }
+        content4_state = 1;
+    }
 
-// $(window).scroll(function() {
-//     if(scrollY > $('#stock p').offset().top - 700) {
-//         stockNum = $('#stock p').text();
-//         console.log(stockNum.splice(3, 1));
-//     }
-// });
-
+});
 
 
 
@@ -363,6 +382,4 @@ $(window).scroll(function(e) {
 
 // 할 일 목록
 
-// scroll시 content2 옆쪽에서 나오기
-// 실시간 주가정보 splice() 물어보기 내일 물어보기
 // scroll시 header fixed 시키면서 슬라이더 그만큼 위에 여백주기

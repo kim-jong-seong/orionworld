@@ -379,14 +379,14 @@ body { height: 300vh; overflow-x: hidden; }
 
 #stock {}
 #stock h3 { padding-top: 60px; color: #aaaaaa; font-size: 20px; }
-#stock p{ color: #fff; font-size: 40px; font-weight: bold; }
+#stock p { color: #fff; font-size: 40px; font-weight: bold; }
 
 #stock #stockInfo { color: #fff; }
 #stock #stockInfo li { float: left; margin: 50px 30px 0 0; font-size: 18px; }
 #stock #stockInfo li span { margin: 0 7px; }
-#stock #stockInfo li:nth-of-type(1) span:nth-of-type(1) { margin: 0 15px 0 30px; color: #dd793f; font-size: 15px; }
+#stock #stockInfo li:nth-of-type(1) span:nth-of-type(1) { display: inline-block; width: 30px; height: 30px; text-indent: -9999px; background: url(../images/up.PNG) no-repeat center right; }
 #stock #stockInfo li:nth-of-type(1) { position: relative; }
-#stock #stockInfo li:nth-of-type(1):after { content: ""; border-right: 2px solid #6f6f6f; display: block; height: 15px; position: absolute; left: 203px; top: 7px; }
+#stock #stockInfo li:nth-of-type(1):after { content: ""; border-right: 2px solid #6f6f6f; display: block; height: 15px; position: absolute; left: 185px; top: 7px; }
 
 #pr {}
 #proposal {}
