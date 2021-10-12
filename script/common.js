@@ -221,19 +221,12 @@ $('#viewer a#viewNext').on('click', function(e) {
 $('#product > a.kind').on('click', function(e) {
     e.preventDefault();
     let thisIndex = $(this).index() - 1;
-    if(viewerState == 0 && viewNow != thisIndex ) {
-        viewerState = 1;
-
+    if(viewNow != thisIndex ) {
         viewNow = thisIndex;
         viewSlideNow = 0;
     
-        $('#viewer section').eq(thisIndex).siblings().find('ul').animate({ marginLeft: -1350 }, 800, function() {
-            $('#viewer section').eq(thisIndex).siblings().find('ul').hide().css({ marginLeft: 0 });
-            $('#viewer section').eq(thisIndex).find('ul').css({ marginLeft: 1350 }).show()
-                                         .animate({ marginLeft: -viewListWidth * viewSlideNow }, 500, function() {
-                                               viewerState = 0;
-                                         });
-        });
+        $('#viewer section').eq(thisIndex).siblings().find('ul').hide().css({ marginLeft: 0 });
+        $('#viewer section').eq(thisIndex).find('ul').css({ marginLeft: 0 }).show().css({ marginLeft: -viewListWidth * viewSlideNow });
     }
 });
 
@@ -349,3 +342,8 @@ window.addEventListener('wheel', function(e) {
         });
     }
 })
+
+
+// 검색 버튼
+// 각종 엔티티 추가
+// viewer 크기 계산해서 조금 키우기

@@ -141,9 +141,9 @@ body { overflow-x: hidden; }
 #slider p.in span.down { position: absolute; background: url(../images/down.PNG) no-repeat center center / cover ; width: 12px; height: 12px; 
                          right: 15%; top: calc(50% - 5px ); }
 
-#slideList li a.slide1 p.cap { font-size: 33px; width: 400px; height: 60px; text-align: center; margin: 0 72.5% 0 27.5%; padding-top: 150px; font-weight: bold; font-family: 'Varela Round', sans-serif; }
+#slideList li a.slide1 p.cap { font-size: 30px; width: 400px; height: 60px; text-align: center; margin: 0 72.5% 0 27.5%; padding-top: 150px; font-weight: bold; font-family: 'Varela Round', sans-serif; }
 #slideList li a.slide1 p.cap span { color: rgb(250, 164, 51); }
-#slideList li a.slide2 p.cap { font-size: 40px; width: 400px; height: 60px; text-align: center; margin: 0 72.5% 0 27.5%; padding-top: 150px; font-weight: bold; font-family: 'Gaegu', cursive; color: #fff; }
+#slideList li a.slide2 p.cap { font-size: 30px; width: 400px; height: 60px; text-align: center; margin: 0 72.5% 0 27.5%; padding-top: 150px; font-weight: bold; font-family: 'Varela Round', sans-serif; color: #fff; }
 #slideList li a.slide2 p.cap span { color: rgb(245, 235, 90); }
 #slideList li a.slide3 p.cap { font-size: 30px; width: 400px; height: 60px; text-align: center; margin: 0 72.5% 0 27.5%; padding-top: 150px; font-weight: bold; font-family: 'Varela Round', sans-serif; }
 #slideList li a.slide3 p.cap span { color: rgb(90, 118, 245); }
@@ -182,7 +182,7 @@ body { overflow-x: hidden; }
 
 #product h2 { padding: 26px 53px 0; font-size: 26px; text-transform: capitalize;
               font-family: 'Varela Round', sans-serif; text-align: center; }
-#product h3 { margin: 5px auto; width: 300px; text-align: center; font-size: 14px; font-family: 'Varela Round', sans-serif; color: #aaa }
+#product h3 { margin: 5px auto; width: 300px; text-align: center; font-size: 14px; font-family: 'Varela Round', sans-serif; color: #aaa;}
 
 #product a.kind { position: absolute; top: 15%; font-family: 'Hahmlet', serif; font-weight: bold; }
 #product a.kind:nth-of-type(1) { right: 20%; }
@@ -205,8 +205,6 @@ body { overflow-x: hidden; }
 #viewer > section > ul > li { float: left; width: 125px; height: 125px; margin: 0 50px; }
 #viewer > section > ul > li > a { display: block;  text-align: center; width: 125px; height: 125px;
                         background: no-repeat center center / cover; text-indent: -9999px;}
-
-/* #viewer > section { position: absolute; left: calc(50% - 450px); top: 0; width: 1350px; height: 444px; } */
 
 
 #pieList {}
@@ -257,11 +255,13 @@ body { overflow-x: hidden; }
 #content1 { height: 40vh; position: relative; }
 
 #content1 #slogun { width: 100%; height: 100%; background: url(../images/main_brand.png) no-repeat center center / cover; box-shadow: 0 0 5px #000; }
-#content1 #slogun h3 { line-height: 37vh; text-align: center; font-size: 55px; font-weight: normal; font-family: 'Stylish', sans-serif; margin: 30px 0; color: #fff; }
-#content1::before { content: ""; display: block; width: 200px; height: 100px; background: rgba(196, 7, 7, 0.7);
-                   position: absolute; left: 18%; top: -7%; }
+#content1 #slogun h3 { line-height: 40vh; text-align: center; font-size: 55px; font-weight: normal; font-family: 'Stylish', sans-serif; margin: 30px 0; color: #fff; position: relative; }
+#content1 #slogun h3::before { content: ""; display: block; width: 200px; height: 100px; background: rgba(196, 7, 7, 0.7);
+        position: absolute; left: 18%; top: -7%; }
+#content1::before { content: ""; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.3; }
 #content1::after { content: ""; display: block; width: 80px; height: 80px; background: rgba(255, 131, 48, 0.8);
                     position: absolute; left: 16%; top: 5.5%; }
+
 
 
 /* content2 */
@@ -342,7 +342,7 @@ body { overflow-x: hidden; }
 
 /* content3 */
 #content3 { height: 80vh; margin-top: 150px; }
-#global { width: 60%; height: 80vh; margin: 0 auto; position: relative; }
+#global { width: 60%; height: 100%; margin: 0 auto; position: relative; }
 #global::before { content: ""; width: 100%; height: 80vh; background: url(../images/지도.png) no-repeat center center / cover; position: absolute; left: 0; top: 0; opacity: 0.3; }
 
 #global > p { text-align: center; font-size: 45px; font-weight: bold; height: 10vh; }
@@ -355,15 +355,15 @@ body { overflow-x: hidden; }
 
 #country li:hover a { color: #ca0202; }
 
-#countryContent { width: 80%; height: 70vh; }
-#countryContent li { position: absolute; height: 70vh; display: none; }
+#countryContent { width: 80%; height: 90%; }
+#countryContent li { position: absolute; height: 70%; display: none; }
 #countryContent li.show { display: block; }
 
 #countryContent li dl { margin: 230px 0; width: 60%; word-break: keep-all; text-align: center; float: left; font-family: 'Jost', sans-serif; }
-#countryContent li dt { margin-bottom: 30px; font-size: 25px; font-weight: bold; color: #ca0202 }
-#countryContent li dd { font-size: 20px; color: #777; font-weight: bold; }
+#countryContent li dt { margin-bottom: 30px; font-size: 1.5em; font-weight: bold; color: #ca0202 }
+#countryContent li dd { font-size: 1.1em; color: #777; font-weight: bold; }
 
-#countryContent li p { width: 40%; line-height: 40px; float: left; margin-top: 260px; text-align: center; font-size: 25px;
+#countryContent li p { width: 40%; line-height: 40px; float: left; margin-top: 260px; text-align: center; font-size: 1.1em;
                        background: #dd793f; border-radius: 30px; color: #eee; font-family: 'Jost', sans-serif; }
 
 #countryContent .mapPin { position: absolute; width: 30px; height: 38px; background: url(../images/map_pin.png); opacity: 0.5; text-indent: -9999px; }
@@ -377,7 +377,7 @@ body { overflow-x: hidden; }
 
 
 /* content4 */
-#content4 { width: 100%; height: 30vh; background: #555555; }
+#content4 { width: 100%; height: 34vh; background: #555555; }
 
 #container { width: 60%; margin: 0 auto; display: flex; }
 #container section { flex: 1; height: 30vh; }
@@ -385,15 +385,15 @@ body { overflow-x: hidden; }
 #container section a { display: block; width: 100%; height: 30vh; }
 
 #stock {}
-#stock h3 { padding-top: 60px; color: #aaaaaa; font-size: 20px; }
-#stock p { color: #fff; font-size: 40px; font-weight: bold; }
+#stock h3 { padding-top: 23%; color: #aaaaaa; font-size: 20px; }
+#stock p { color: #fff; font-size: 2em; font-weight: bold; }
 
 #stock #stockInfo { color: #fff; }
-#stock #stockInfo li { float: left; margin: 50px 30px 0 0; font-size: 18px; }
-#stock #stockInfo li span { margin: 0 7px; }
+#stock #stockInfo li { float: left; margin: 50px 30px 0 0; font-size: 1em; }
+#stock #stockInfo li span { margin: 0 5px; }
 #stock #stockInfo li:nth-of-type(1) span:nth-of-type(1) { display: inline-block; width: 30px; height: 30px; text-indent: -9999px; background: url(../images/up.PNG) no-repeat center right; }
 #stock #stockInfo li:nth-of-type(1) { position: relative; }
-#stock #stockInfo li:nth-of-type(1):after { content: ""; border-right: 2px solid #6f6f6f; display: block; height: 15px; position: absolute; left: 185px; top: 7px; }
+#stock #stockInfo li:nth-of-type(1):after { content: ""; border-right: 2px solid #6f6f6f; display: block; height: 15px; position: absolute; left: 170px; top: 7px; }
 
 #pr {}
 #proposal {}
