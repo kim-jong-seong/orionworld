@@ -128,7 +128,7 @@ body { overflow-x: hidden; }
 #slideList li { float: left; width: 20%; height: 50vh; overflow: hidden; position: relative; }
 #slideList li a { display: block; width: 100%; height: 50vh; background: no-repeat center center / cover; }
 
-#slideList li a.slide1 { background-image: url(../images/bg1.PNG); position: relative; }
+#slideList li a.slide1 { background-image: url(../images/bg1.png); position: relative; }
 #slideList li a.slide2 { background-image: url(../images/bg2.png); position: relative; }
 #slideList li a.slide3 { background-image: url(../images/bg3.png); position: relative; }
 
