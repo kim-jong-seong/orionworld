@@ -345,4 +345,10 @@ window.addEventListener('wheel', function(e) {
 
 
 // 검색 버튼
-// 각종 엔티티 추가
+
+$('a.search').click(function() {
+    $('#searchBox').animate({ top: 0 }, 500);
+});
+$('#searchBox #closeSearch').click(function() {
+    $('#searchBox').animate({ top: "-90px" }, 500);
+});
