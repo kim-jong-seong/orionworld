@@ -82,7 +82,7 @@ let now = 0;
 
 let autoSlide;
 
-autoSlideMode();
+// autoSlideMode();
 
 function autoSlideMode() {
     autoSlide = setInterval(function() {
@@ -189,7 +189,7 @@ function animateSlide() {
 let viewNow = 0;
 let viewSlideNow = 0;
 let viewerState = 0;
-const viewListWidth = 225;
+const viewListWidth = $('#viewer section ul li:eq(0)').outerWidth(true);
 
 $('#viewer a#viewPrev').on('click', function(e) {
     e.preventDefault();
@@ -346,4 +346,3 @@ window.addEventListener('wheel', function(e) {
 
 // 검색 버튼
 // 각종 엔티티 추가
-// viewer 크기 계산해서 조금 키우기
