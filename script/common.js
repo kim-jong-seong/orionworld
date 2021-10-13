@@ -346,9 +346,11 @@ window.addEventListener('wheel', function(e) {
 
 // 검색 버튼
 
-$('a.search').click(function() {
+$('a.search').click(function(e) {
+    e.preventDefault();
     $('#searchBox').animate({ top: 0 }, 500);
 });
-$('#searchBox #closeSearch').click(function() {
+$('#searchBox #closeSearch').click(function(e) {
+    e.preventDefault();
     $('#searchBox').animate({ top: "-90px" }, 500);
 });
